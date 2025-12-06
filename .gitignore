@@ -1,0 +1,6 @@
+node_modules/
+dist/
+src/logs/
+# Logs
+*.log
+module-4-assignment-88232-firebase-adminsdk-fbsvc-09f72434bb.json
