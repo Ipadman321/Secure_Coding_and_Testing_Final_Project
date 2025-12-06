@@ -30,7 +30,7 @@ const isAuthorized = (opts: AuthorizationOptions): MiddlewareFunction => {
             }
 
             // If no role exists on the user, throw Forbidden response
-            if (!role) {
+            if (role) {
                 throw new AuthorizationError(
                     "Forbidden: No role found",
                     "ROLE_NOT_FOUND"

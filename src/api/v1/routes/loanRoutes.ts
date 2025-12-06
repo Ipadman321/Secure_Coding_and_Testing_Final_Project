@@ -13,7 +13,6 @@ const router: express.Router = express.Router();
 router.get(
     "/", 
     authenticate,
-    isAuthorized({ hasRole: ["officer", "manager", "admin"] }),
     getAllLoans
 );
 router.post(
@@ -24,7 +23,6 @@ router.post(
 );
 router.put(
     "/:id/review",
-    authenticate,
     isAuthorized({ hasRole: ["officer", "admin"] }),
     reviewLoanById
 );
